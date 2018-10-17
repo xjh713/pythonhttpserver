@@ -41,7 +41,7 @@ class MyHandler(SimpleHTTPRequestHandler):
         self.wfile.write(lines)
         
 def start_server():
-    httpd = SocketServer.TCPServer(("10.198.47.101", 8090), MyHandler)
+    httpd = SocketServer.TCPServer(("127.0.0.1", 8090), MyHandler)
     print 'Starting httpd...'
     httpd.serve_forever()
     
